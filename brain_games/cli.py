@@ -9,7 +9,6 @@ import prompt
 """The function takes as input"""
 
 
-
 def welcome_user():
     name = prompt.string('May I have your name? ')
     greeting = 'Hello, {}'.format(name)
