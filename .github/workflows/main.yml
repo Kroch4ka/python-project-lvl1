@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: cloning repository
         uses: actions/checkout@v1
+      - name: name_folder
+        run: ls -la
   Installing_and_running_linter:
     runs-on: ubuntu-latest
     needs: [clonning_repository]
