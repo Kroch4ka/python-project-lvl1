@@ -24,7 +24,7 @@ jobs:
       - name: install poetry 
         uses: dschep/install-poetry-action@v1.3
       - name: run poetry and make file
-        uses: poetry run brain-games
+        run: poetry run brain-games
         
         
         
