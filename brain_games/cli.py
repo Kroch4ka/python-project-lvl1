@@ -1,13 +1,16 @@
 # Module with input function
 
-"""The welcome user function asks for a name and displays a greeting."""
+"""The welcome user function asks for a name."""
 
 import prompt
 
 # The function asks for your name and greets
 
-"""The function takes as input a name of type string and outputs greeting"""
+"""The function takes as input"""
+
+
 
 def welcome_user():
     name = prompt.string('May I have your name? ')
-    print(f"Hello, {name} !")
+    greeting = 'Hello, {}'.format(name)
+    print(greeting)
