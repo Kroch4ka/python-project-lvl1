@@ -24,10 +24,18 @@ jobs:
     needs: [clonning_repository]
     
     steps:
-      - name: installing_flake8 
-        run: python -m pip install flake8
-      - name: installing_poetry
-        run: flake8
+      - name: installing_flake8, poetry and start make
+        run: | 
+         python -m pip install flake8
+         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+         poetry install
+         make lint
+
+         
+           
+        
+        
+        
         
         
 
