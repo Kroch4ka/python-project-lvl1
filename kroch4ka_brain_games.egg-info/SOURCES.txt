@@ -8,4 +8,4 @@ kroch4ka_brain_games.egg-info/SOURCES.txt
 kroch4ka_brain_games.egg-info/dependency_links.txt
 kroch4ka_brain_games.egg-info/entry_points.txt
 kroch4ka_brain_games.egg-info/requires.txt
-kroch4ka_brain_games.egg-info/top_level.txt
+kroch4ka_brain_games.egg-info/top_level.txt1
