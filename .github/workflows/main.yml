@@ -27,7 +27,7 @@ jobs:
         run: |
           poetry add prompt
           python -m pip install flake8
-          poetry add --dev flake8
+          make lint
           
 
           
