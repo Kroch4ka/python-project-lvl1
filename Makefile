@@ -2,5 +2,5 @@
 install:
 	poetry install
 	poetry add prompt
-lint:
+linter:
 	poetry run flake8 brain_games
