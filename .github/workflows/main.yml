@@ -22,7 +22,7 @@ jobs:
       - name: version
         run: aws --version
       - name: install python
-        run: actions/setup-python@v1
+        uses: actions/setup-python@v1
         with:
           python-version: '3.8'
           architecture: 'x64'  
