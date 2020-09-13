@@ -1,40 +1,26 @@
-# This is a basic workflow to help you get started with Actions
+name: CI
+on: pull_request
 
-name: test-lint
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  clonning_repository:
-    runs-on: ubuntu-latest
+  ci:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+        poetry-version: [1.0, 1.0.10]
+        os: [ubuntu-18.04, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: cloning repository
-        uses: actions/checkout@v1
-      - name: name_folder
-        run: ls -la
-      - name: version
-        run: aws --version
-      - name: install python
-        uses: actions/setup-python@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
-          architecture: 'x64'
-      - name: installing flake8
-        run:  pip install flake8
-      - name: poetry install
-        run: |
-         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-         poetry --version
-
-
-
+          python-version: ${{ matrix.python-version }}
+      - name: Run image
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - name: View poetry --help
+        run: poetry --help
 
          
            
