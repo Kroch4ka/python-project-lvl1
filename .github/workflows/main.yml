@@ -25,8 +25,8 @@ jobs:
         uses: dschep/install-poetry-action@v1.3
       - name: add dependencies and test run
         run: |
-          poetry add prompt
           python -m pip install flake8
+          poetry add --dev flake8
           make lint
           
 
