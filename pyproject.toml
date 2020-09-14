@@ -1,18 +1,21 @@
+
 [tool.poetry]
 name = "Kroch4ka_brain_games"
-version = "0.2.0"
+version = "0.2.2"
 description = ""
 authors = ["Kroch4ka <nekitgo80@gmail.com>"]
 packages = [{include = "brain_games"},]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.14.1"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
+brain-games="brain_games.scripts.brain_games:main" 
+brain-even="brain_games.scripts.brain_even:main"
 
 [build-system]
 requires = ["poetry>=0.12"]

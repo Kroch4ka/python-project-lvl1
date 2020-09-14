@@ -10,7 +10,12 @@ import random
 
 
 def welcome_user():
-    print('Welcome to the Brain Games\nAnswer "yes" if number even otherwise answer "no".\n\n')
     name = prompt.string('May I have your name? ')
-    greeting = 'Hello, {}\n\n'.format(name)
+    greeting = 'Hello, {}'.format(name)
     print(greeting)
+def parity_check():
+    question = 
+    n = 0
+    answer = " "
+    while n < 3:
+        
