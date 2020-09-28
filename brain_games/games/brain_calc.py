@@ -3,15 +3,15 @@ from brain_games.games.cli import welcome_user
 
 
 def get_operator_expression(arg_1, arg_2):
-    c = random.randint(1, 3)
+    rand_op = random.randint(1, 3)
     dict_of_operations = {1: arg_1 + arg_2, 2: arg_1 * arg_2, 3: arg_1 - arg_2}
-    if c == 1 in dict_of_operations:
+    if rand_op == 1 in dict_of_operations:
         print(f"Question: {arg_1} + {arg_2}")
         return arg_1 + arg_2
-    elif c == 2 in dict_of_operations:
+    elif rand_op == 2 in dict_of_operations:
         print(f"Question: {arg_1} * {arg_2}")
         return arg_1 * arg_2
-    elif c == 3 in dict_of_operations:
+    elif rand_op == 3 in dict_of_operations:
         print(f"Question: {arg_1} - {arg_2}")
         return arg_1 - arg_2
 

@@ -2,9 +2,13 @@
 [tool.poetry]
 name = "Kroch4ka_brain_games"
 version = "1.0.0"
-description = ""
+description = "different brain games"
 authors = ["Kroch4ka <nekitgo80@gmail.com>"]
 packages = [{include = "brain_games"},]
+classifiers = [
+    "Topic :: Games/Entertainment :: Puzzle Games"
+]
+repository = "https://github.com/Kroch4ka/python-project-lvl1"
 
 [tool.poetry.dependencies]
 python = "^3.6"
