@@ -7,13 +7,13 @@ def get_operator_expression(arg_1, arg_2):
     dict_of_operations = {1: arg_1 + arg_2, 2: arg_1 * arg_2, 3: arg_1 - arg_2}
     if rand_op == 1 in dict_of_operations:
         print(f"Question: {arg_1} + {arg_2}")
-        return arg_1 + arg_2
+        return dict_of_operations.get(rand_op)
     elif rand_op == 2 in dict_of_operations:
         print(f"Question: {arg_1} * {arg_2}")
-        return arg_1 * arg_2
+        return dict_of_operations.get(rand_op)
     elif rand_op == 3 in dict_of_operations:
         print(f"Question: {arg_1} - {arg_2}")
-        return arg_1 - arg_2
+        return dict_of_operations.get(rand_op)
 
 
 def brain_calc():
