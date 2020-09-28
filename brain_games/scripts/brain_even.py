@@ -1,8 +1,7 @@
 
-from brain_games.brain_even import parity_check
-from brain_games.cli import welcome_user
+from brain_games.games.brain_even import parity_check
+
 def main():
-    welcome_user()
     parity_check()
 
 
