@@ -1,9 +1,0 @@
-#Makefile
-install:
-	poetry install
-	poetry add prompt
-<<<<<<< HEAD
-linter:
-=======
-lint:
-	poetry run flake8 brain_games
