@@ -1,9 +1,9 @@
-from brain_games.games.brain_gcd import brain_gcd
+from brain_games.games.brain_gcd import gcd
+from brain_games.games.engine_brain import engine_brain
 
 
 def main():
-    brain_gcd()
-
+    engine_brain(gcd, 'Find the greatest common divisor of given numbers.')
 
 
 if __name__ == '__main__':

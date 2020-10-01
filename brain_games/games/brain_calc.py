@@ -1,35 +1,16 @@
 import random
-from brain_games.games.cli import welcome_user
+import math
 
 
-def get_operator_expression(arg_1, arg_2):
-    rand_op = random.randint(1, 3)
-    dict_of_operations = {1: arg_1 + arg_2, 2: arg_1 * arg_2, 3: arg_1 - arg_2}
-    if rand_op == 1 in dict_of_operations:
-        print(f"Question: {arg_1} + {arg_2}")
-        return dict_of_operations.get(rand_op)
-    elif rand_op == 2 in dict_of_operations:
-        print(f"Question: {arg_1} * {arg_2}")
-        return dict_of_operations.get(rand_op)
-    elif rand_op == 3 in dict_of_operations:
-        print(f"Question: {arg_1} - {arg_2}")
-        return dict_of_operations.get(rand_op)
+def get_operator_expression():
+    number_1 = random.randint(1, 100)
+    number_2 = random.randint(1, 100)
+    operations = ['+', '-', '*', '/']
+    random_key_operation = operations[random.randint(0, len(operations) - 1)]
+    dict_operations = {'+': number_1 + number_2,
+                       '-': number_1 - number_2,
+                       '*': number_1 * number_2,
+                       '/': math.ceil(number_1 / number_2)}
+    random_value_operation = dict_operations.get(random_key_operation)
+    return ' '.join(map(str, [number_1, random_key_operation, number_2])), random_value_operation
 
-
-def brain_calc():
-    name = welcome_user('What is the result of the expression?')
-    k = 0
-    while k < 3:
-        op_1 = int(random.randint(1, 100))
-        op_2 = int(random.randint(1, 100))
-        result = get_operator_expression(op_1, op_2)
-        answer = int(input("Your answer: "))
-        if answer == result:
-            print("Correct!")
-            k += 1
-        else:
-            print(f"\n'{answer}' is wrong answer;(."
-                  f"Correct answer was '{result}'.\nLet's try again")
-            break
-    else:
-        print(f"Congratulations, {name}!")
