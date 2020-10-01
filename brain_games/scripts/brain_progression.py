@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from brain_games.games.brain_progression import progression
 from brain_games.games.engine_brain import engine_brain
 

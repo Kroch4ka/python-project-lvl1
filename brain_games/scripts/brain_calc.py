@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 from brain_games.games.brain_calc import get_operator_expression
 from brain_games.games.engine_brain import engine_brain

@@ -1,8 +1,13 @@
-import random
 from brain_games.games.cli import welcome_user
 
 
 def engine_brain(function, game_description):
+        """General engine for subsequent text games
+        Input: a wrap-around game(function) that should
+        return an appropriate question for the player and an answer,
+        description of the game(string format)
+        Output: based on the received data,
+        organizes a simple game with the player"""
         k = 0
         name = welcome_user(game_description)
         while k < 3:

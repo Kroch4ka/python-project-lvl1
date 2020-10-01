@@ -17,6 +17,3 @@ def progression():
     win_value = int(list_of_ariphm[replace_index])
     list_of_ariphm[replace_index] = ".."
     return ' '.join(list_of_ariphm), win_value
-
-
-
