@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.games.brain_progression import progression
-from brain_games.games.engine_brain import engine_brain
+from brain_games.games.brain_progression import formatting_progression
+from brain_games.games.engine_brain import interact_with_player
 
 
 def main():
-    engine_brain(progression, "What number is missing in the progression?")
+    interact_with_player(formatting_progression)
 
 
 if __name__ == '__main__':

@@ -1,17 +1,17 @@
 import random
 import math
+from operator import add, mul, sub, truediv
 
 
-def get_operator_expression():
-    number_1 = random.randint(1, 100)
-    number_2 = random.randint(1, 100)
-    operations = ['+', '-', '*', '/']
-    random_index_operations = random.randint(0, len(operations) - 1)
-    random_key_operation = operations[random_index_operations]
-    dict_operations = {'+': number_1 + number_2,
-                       '-': number_1 - number_2,
-                       '*': number_1 * number_2,
-                       '/': math.ceil(number_1 / number_2)}
-    random_value_operation = dict_operations.get(random_key_operation)
-    random_question = ' '.join([str(number_1), random_key_operation, str(number_2)])
-    return random_question, random_value_operation
+def calculation_operation():
+    first_operand = random.randint(1, 100)
+    second_operand = random.randint(1, 100)
+    collection_operators = ['+', '-', '*', '/']
+    operator = random.choice(collection_operators)
+    associative_operators = {'+': add(first_operand, second_operand),
+                       '-': sub(first_operand, second_operand),
+                       '*': mul(first_operand, second_operand),
+                       '/': round(truediv(first_operand, second_operand), 1)}
+    result_operation = associative_operators.get(operator)
+    question_for_player = str(first_operand) + ' ' + operator + ' ' + str(second_operand)
+    return question_for_player, result_operation

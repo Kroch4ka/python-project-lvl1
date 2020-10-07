@@ -1,11 +1,17 @@
 import random
 
-def prime_number():
-    rand_number = random.randint(2, 100)
-    a = True
-    for k in range(2, rand_number):
-        if rand_number % k == 0:
-            a = False
-    if a:
-        return rand_number, 'yes'
-    return rand_number, 'no'
+
+def is_prime(number):
+    if number == 2:
+        return True
+    for k in range(2, number):
+        if number % k == 0:
+            return False
+    return True
+
+
+def formatting_prime():
+    check_number = random.randint(2, 100)
+    if is_prime(check_number):
+        return check_number, 'yes'
+    return check_number, 'no'

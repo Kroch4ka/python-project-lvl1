@@ -1,11 +1,18 @@
-from random import randint
+import random
 
 
-def gcd():
-    gcd_value = 0
-    num_1 = randint(1, 100)
-    num_2 = randint(1, 100)
-    for k in range(1, min(num_1, num_2) + 1):
-        if num_1 % k == 0 and num_2 % k == 0:
-            gcd_value = k
-            return ' '.join(map(str, [num_1, num_2])), gcd_value
+def getting_gcf(first_operand, second_operand):
+    dividend = 1
+    min_operand = min(first_operand, second_operand)
+    max_operand = max(first_operand, second_operand)
+    for value in range(1, min_operand):
+        if min_operand % value == 0 and max_operand % value == 0:
+            dividend = value
+    return dividend
+
+
+def formatting_gcf():
+    random_first_operand = random.randint(1, 100)
+    random_second_operand = random.randint(1, 100)
+    dividend = getting_gcf(random_first_operand, random_second_operand)
+    return str(random_first_operand) + ' ' + str(random_second_operand), dividend

@@ -1,11 +1,12 @@
+
 #!/usr/bin/env python3
 
-from brain_games.games.engine_brain import engine_brain
-from brain_games.games.brain_even import brain_even
+from brain_games.games.engine_brain import interact_with_player
+from brain_games.games.brain_even import formatting_even_game
 
 
 def main():
-    engine_brain(brain_even, 'Answer "yes" if number even otherwise answer "no".')
+    interact_with_player(formatting_even_game)
 
 
 if __name__ == '__main__':

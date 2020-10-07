@@ -1,8 +1,13 @@
 import random
 
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
 
-def brain_even():
-    random_number = random.randint(2, 100)
-    if random_number % 2 == 0:
-        return random_number, 'yes'
-    return random_number, 'no'
+
+def formatting_even_game():
+    operand = random.randint(1, 100)
+    if is_even(operand):
+        return operand, 'yes'
+    return operand, 'no'
