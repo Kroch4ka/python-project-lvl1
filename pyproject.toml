@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "Kroch4ka_brain_games"
-version = "1.1.4"
+version = "1.1.5"
 description = "different brain games"
 authors = ["Kroch4ka <nekitgo80@gmail.com>"]
 packages = [{include = "brain_games"},]
