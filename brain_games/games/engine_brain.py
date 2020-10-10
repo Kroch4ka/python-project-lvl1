@@ -1,13 +1,17 @@
-from brain_games.games.cli import greets_the_user, asking_name
+from brain_games.games.cli import greet_user, ask_name
+from prompt import string
 
-def interact_with_player(game_template):
-        greets_the_user(game_template)
-        name = asking_name()
-        for k in range(3):
-            question, answer = game_template()
+
+def launch_game(game_template):
+        greet_user()
+        name = ask_name()
+        _, _, description_game = game_template()
+        print(description_game)
+        for number_of_rounds in range(3):
+            question, answer, _ = game_template()
             print(f'Question: {question}')
-            answer_user = input('Your answer: ')
-            if str(answer) == answer_user:
+            answer_user = string('Your answer: ')
+            if ''.join(map(str, str(answer))) == answer_user:
                 print('Correct!')
             else:
                 print(f"'{answer_user}' is wrong answer;(\n"

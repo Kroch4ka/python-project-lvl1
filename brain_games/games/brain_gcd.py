@@ -12,7 +12,8 @@ def getting_gcf(first_operand, second_operand):
 
 
 def formatting_gcf():
+    decsription = 'Find the greatest common divisor of given numbers.'
     random_first_operand = random.randint(1, 100)
     random_second_operand = random.randint(1, 100)
     dividend = getting_gcf(random_first_operand, random_second_operand)
-    return str(random_first_operand) + ' ' + str(random_second_operand), dividend
+    return str(random_first_operand) + ' ' + str(random_second_operand), dividend, description
